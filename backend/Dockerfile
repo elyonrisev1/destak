@@ -1,8 +1,12 @@
-FROM node:22-alpine
+FROM node:22-slim
+
+RUN apt-get update && apt-get install -y openssl
 
 WORKDIR /app
 
 COPY package*.json ./
+COPY prisma ./prisma
+
 RUN npm install
 
 COPY . .
