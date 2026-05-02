@@ -1,7 +1,14 @@
 {
+  "name": "destak-publicidade",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    ...,
-    "build": "cd frontend && npm run build",
-    "build:frontend": "cd frontend && npm run build"
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "setup": "cd backend && npx prisma generate && npx prisma db push && node prisma/seed.js",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\" \"cd audio-service && uvicorn main:app --reload --port 8000\"",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
