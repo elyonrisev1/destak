@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from ..models.audio_models import MixGenerateRequest, AudioResponse
-from ..services.audio_processor import mix_audio
+from models.audio_models import MixGenerateRequest, AudioResponse
+from services.audio_processor import mix_audio
 
 router = APIRouter(prefix="/audio/mix", tags=["Mixer"])
 
