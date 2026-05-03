@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from ..models.audio_models import TTSGenesisRequest, AudioResponse
-from ..services.voice_engine import generate_tts, get_available_voices
+from models.audio_models import TTSGenesisRequest, AudioResponse
+from services.voice_engine import generate_tts, get_available_voices
 
 router = APIRouter(prefix="/audio/tts", tags=["Text-to-Speech"])
 
