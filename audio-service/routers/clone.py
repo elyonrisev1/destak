@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from typing import Optional
-from ..models.audio_models import CloneExtractRequest, CloneGenerateRequest, AudioResponse
-from ..services.voice_engine import clone_voice, generate_with_clone
-from ..services.yt_extractor import download_audio
+from models.audio_models import CloneExtractRequest, CloneGenerateRequest, AudioResponse
+from services.voice_engine import clone_voice, generate_with_clone
+from services.yt_extractor import download_audio
 
 router = APIRouter(prefix="/audio/clone", tags=["Clone de Voz"])
 
