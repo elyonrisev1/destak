@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from typing import Optional, List
-from ..models.audio_models import AudioResponse
-from ..services.audio_processor import process_upload, apply_fade
+from models.audio_models import AudioResponse
+from services.audio_processor import process_upload, apply_fade
 
 router = APIRouter(prefix="/audio/upload", tags=["Upload e Processamento"])
 
